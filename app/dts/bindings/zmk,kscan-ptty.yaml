@@ -1,0 +1,17 @@
+description: |
+  Allows defining a mock keyboard scan driver that accepts a list of commands from the POSIX terminal.
+
+compatible: "zmk,kscan-ptty"
+
+properties:
+  label:
+    type: string
+  event-period:
+    type: int
+    description: Milliseconds between each generated event
+  rows:
+    type: int
+  columns:
+    type: int
+  exit-after:
+    type: boolean

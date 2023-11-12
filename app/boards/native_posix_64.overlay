@@ -8,11 +8,16 @@
     };
 
     kscan: kscan {
-        compatible = "zmk,kscan-mock";
+        compatible = "zmk,kscan-ptty";
         label = "KSCAN_MOCK";
 
         rows = <2>;
         columns = <2>;
         exit-after;
+        event-period = <10>;
     };
+};
+
+&uart0 {
+    status = "okay";
 };

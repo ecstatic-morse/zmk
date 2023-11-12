@@ -6,6 +6,7 @@ DT_COMPAT_ZMK_KSCAN_GPIO_DEMUX := zmk,kscan-gpio-demux
 DT_COMPAT_ZMK_KSCAN_GPIO_DIRECT := zmk,kscan-gpio-direct
 DT_COMPAT_ZMK_KSCAN_GPIO_MATRIX := zmk,kscan-gpio-matrix
 DT_COMPAT_ZMK_KSCAN_MOCK := zmk,kscan-mock
+DT_COMPAT_ZMK_KSCAN_PTTY := zmk,kscan-ptty
 
 if KSCAN
 
@@ -61,6 +62,10 @@ endif # ZMK_KSCAN_GPIO_MATRIX
 config ZMK_KSCAN_MOCK_DRIVER
     bool
     default $(dt_compat_enabled,$(DT_COMPAT_ZMK_KSCAN_MOCK))
+
+config ZMK_KSCAN_PTTY_DRIVER
+    bool
+    default $(dt_compat_enabled,$(DT_COMPAT_ZMK_KSCAN_PTTY))
 
 if ZMK_KSCAN_GPIO_DRIVER
 
